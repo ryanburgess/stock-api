@@ -1,0 +1,31 @@
+{
+  "name": "stock-api",
+  "version": "0.0.1",
+  "description": "A stock API",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ryanburgess/stock-api.git"
+  },
+  "keywords": [
+    "stock",
+    "api",
+    "values",
+    "data",
+    "finance"
+  ],
+  "author": "Ryan Burgess @burgessdryan",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ryanburgess/stock-api/issues"
+  },
+  "homepage": "https://github.com/ryanburgess/stock-api",
+  "dependencies": {
+    "cheerio": "^0.19.0",
+    "express": "^4.13.3",
+    "request": "^2.65.0"
+  }
+}
