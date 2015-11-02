@@ -26,7 +26,7 @@ app.get('/api/', function (req, res) {
       var rtq = $('#yfi_rt_quote_summary .time_rtq_content').text();
 
       rtq = rtq.split('(');
-      var price = rtq[0];
+      var price = rtq[0].trim();
       var percent = rtq[1].replace(')', '');
 
       var upDown;
