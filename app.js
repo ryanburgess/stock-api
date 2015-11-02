@@ -7,6 +7,8 @@ app.get('/', function (req, res) {
   res.send('<a href="/api/?s=NFLX">Stock API</a><p>Using the end point /api/?s= and passing a stock symbol in the query the API will return a JSON response</p>');
 });
 app.get('/api/', function (req, res) {
+  res.header('Access-Control-Allow-Origin', '*');
+  res.header('Access-Control-Allow-Headers', 'X-Requested-With');
   var qr = req.query.s;
   
   if(qr !== undefined){
