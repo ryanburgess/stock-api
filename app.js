@@ -30,6 +30,10 @@ app.get('/api/', function (req, res) {
       rtq = rtq.split('(');
       var price = rtq[0].trim();
       var percent = rtq[1].replace(')', '');
+      var updated = $('#yfs_t53_nflx').text();
+      var prev = $('#table1').find('td').eq(0).text();
+      var open = $('#table1').find('td').eq(1).text();
+      var bid = $('#table1').find('td').eq(2).text();
 
       var upDown;
       if($('#yfi_rt_quote_summary .time_rtq_content').hasClass('down_r')){
@@ -37,7 +41,7 @@ app.get('/api/', function (req, res) {
       }else{
         upDown = 'up';
       }
-      stock.push({company: title, symbol: qr, stock_number: stockNum, price_change: price, percent_change: percent, up_down: upDown})
+      stock.push({company: title, symbol: qr, stock_number: stockNum, price_change: price, percent_change: percent, up_down: upDown, updated: updated, previous: prev, open: open, bid: bid})
       
     });
   }else{
