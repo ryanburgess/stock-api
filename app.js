@@ -23,7 +23,7 @@ app.get('/api/', function (req, res) {
       }
 
       $ = cheerio.load(body);
-      var stockNum = $('#yfs_l84_nflx').text();
+      var stockNum = $('.time_rtq_ticker').text();
       var title = $('#yfi_rt_quote_summary .title').text();
       var rtq = $('#yfi_rt_quote_summary .time_rtq_content').text();
 
